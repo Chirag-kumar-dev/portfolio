@@ -1,0 +1,104 @@
+/**
+ * Centralized data/constants for the portfolio
+ * All data is readonly for immutability and better performance
+ */
+import { SiGithub, SiLinkedin, SiLeetcode, SiCodeforces } from "react-icons/si";
+import type { Role, Social, Project } from "@/lib/types";
+import { EXTERNAL_URLS, ASSET_PATHS } from "@/lib/constants";
+
+export const socials: readonly Social[] = [
+  {
+    href: EXTERNAL_URLS.GITHUB,
+    icon: SiGithub,
+    label: "GitHub",
+  },
+  // {
+  //   href: EXTERNAL_URLS.CODEFORCES,
+  //   icon: SiCodeforces,
+  //   label: "Codeforces",
+  // },
+  // {
+  //   href: EXTERNAL_URLS.LEETCODE,
+  //   icon: SiLeetcode,
+  //   label: "LeetCode",
+  // },
+  {
+    href: EXTERNAL_URLS.LINKEDIN,
+    icon: SiLinkedin,
+    label: "LinkedIn",
+  },
+] as const;
+
+export const projects: readonly Project[] = [
+  {
+    name: "Coloured Icons",
+    description:
+      "A CDN for coloured icons. It provides a simple way to use icons in your projects with customizable colors.",
+    link: {
+      href: EXTERNAL_URLS.COLOURED_ICONS,
+      label: "coloured-icons.vercel.app",
+    },
+    logo: ASSET_PATHS.LOGOS.COLOURED_ICONS,
+  },
+  {
+    name: "Portfolio",
+    description:
+      "This portfolio website, showcasing my work and projects. Built with Next.js, Tailwind CSS, and React Icons.",
+    link: {
+      href: EXTERNAL_URLS.PORTFOLIO,
+      label: "chirag-kumar-dev.vercel.app",
+    },
+    logo: ASSET_PATHS.LOGOS.PORTFOLIO_AVATAR,
+  },
+  {
+    name: "Vembric",
+    description:
+      "An API documentation template that helps you create beautiful and interactive API documentation on the web.",
+    link: {
+      href: EXTERNAL_URLS.VEMBRIC,
+      label: "vembric.vercel.app",
+    },
+    logo: ASSET_PATHS.LOGOS.VEMBRIC,
+  },
+] as const;
+
+export const resume: readonly Role[] = [
+  {
+    company: "Stryker",
+    title: "Senior Software Engineer",
+    logo: ASSET_PATHS.LOGOS.Stryker,
+    start: "July 2024",
+    end: "Present",
+    website: EXTERNAL_URLS.Stryker,
+  },
+  {
+    company: "Sourcefuse",
+    title: "Software Engineer",
+    logo: ASSET_PATHS.LOGOS.Sourcefuse,
+    start: "April. 2021",
+    end: "July 2024",
+    website: EXTERNAL_URLS.Sourcefuse,
+  },
+] as const;
+
+// Content constants for better maintainability
+export const CONTENT = {
+  HERO: {
+    TITLE: "Software engineer, learner, and an amateur photographer.",
+    DESCRIPTION:
+      "I'm Chirag, a software engineer based in India. I specialize in building scalable web applications with experience working at both multinational corporations like Stryker and startups like Sourcefuse. I'm passionate about creating solutions that make a difference.",
+  },
+  PROJECTS: {
+    TITLE: "A collection of projects I've passionately built.",
+    DESCRIPTION:
+      "I've worked on tons of little projects over the years but these are the ones that I'm most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved.",
+  },
+  ABOUT: {
+    TITLE: "About Me",
+    DESCRIPTIONS: [
+      "I've been working as a software engineer for a while now, and I've had the chance to work at different types of companies - from big corporations to smaller startups.",
+      "Most of my work involves TypeScript, Next.js for frontend stuff, and Node.js for backend.",
+      "When I'm not coding, I like trying out new tech, contributing to open-source projects, hitting the gym, taking photos, and occasionally crawling through Coursera courses to finish them (spoiler: I actually do).",
+    ],
+  },
+} as const;
