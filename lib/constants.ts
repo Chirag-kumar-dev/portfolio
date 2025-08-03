@@ -8,7 +8,7 @@ export const EXTERNAL_URLS = {
   LINKEDIN: "https://www.linkedin.com/in/k2chirag/",
   LEETCODE: "",
   CODEFORCES: "",
-  PORTFOLIO: "https://chiragKumar.vercel.app",
+  PORTFOLIO: "https://chirag-Kumar-dev.vercel.app",
   COLOURED_ICONS: "https://coloured-icons.vercel.app",
   VEMBRIC: "https://vembric.vercel.app",
   // Company URLs
